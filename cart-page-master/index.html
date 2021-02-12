@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="3d-styles.css" />
+
     <link rel="stylesheet" href="./assests/Fonts/Myraid-pro/style.css" />
     <title>Nike Slider</title>
+    <script src = "../htdocs/javascript/three.js"></script>
+    <script src = "../htdocs/javascript/OrbitControls.js"></script>
+    <script src = "../htdocs/javascript/OBJLoader.js"></script>
+    <script src="../htdocs/javascript/GLTFLoader.js"></script>
+
+
   </head>
   <body>
     <!-- HEADER -->
@@ -56,13 +64,12 @@
     <main class="main container">
       <div class="row">
         <!-- NIKE SHOE -->
-        <div class="shoe">
-          <div class="shoe-figure"></div>
+        <div id = "shoe-div" class="shoe" style="background-color: black !important;" >
+          <!-- <div class="shoe-figure"></div> -->
 
-          <div>
-            <img class="shoe-img" src="./assests/images/pic1.png" alt="" />
-            <!-- <img class="shoe-img" src="./images/pic2.png" alt="" /> -->
-          </div>
+          <!-- <img  class="shoe-img" src="./assests/images/pic1.png" alt=""  />  -->
+          <!-- <img class="shoe-img" src="./images/pic2.png" alt="" /> -->
+
 
           <div class="dots">
             <span class="dot dot-color-1 active"></span>
@@ -115,5 +122,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <!-- Custom Script -->
     <script src="index.js"></script>
+    <script src="game-code.js"></script>
   </body>
 </html>

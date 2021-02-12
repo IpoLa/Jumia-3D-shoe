@@ -1,6 +1,6 @@
 <html lang="en">
      <head>
-        <title>3d</title>
+        <title>3d fool</title>
          <style>
              body{
                  margin: 0;
@@ -10,7 +10,7 @@
              canvas{
                  width: 100% !important;
                  height: 100% !important;
-                 
+                 position: inherit;
              }
          </style>
      </head>
@@ -28,7 +28,18 @@
          var renderer = new THREE.WebGLRenderer()
          renderer.setSize(window.innerWidth, window.innerHeight )
          document.body.appendChild(renderer.domElement);
-         
+
+         window.addEventListener('resize',function ()
+            {
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+            renderer.setSize(width,height);
+            camera.aspect = width/height;
+            camera.updateProjectionMatrix();
+                
+            });
+
+
         // const cubeGeometry = new THREE.BoxGeometry( 1, 1, 1 );
         // const cubeMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
         // const cubeMesh = new THREE.Mesh( cubeGeometry, cubeMaterial );
@@ -47,7 +58,6 @@
          loader.load("model/ascis-nimbus-20/scene.gltf", function (gltf){
 
             gltf.scene.position.set(5,-15,7);
-
 
             scene.add(gltf.scene)
          })
