@@ -8,9 +8,15 @@ var camera = new THREE.PerspectiveCamera(
 );
 
 var renderer = new THREE.WebGLRenderer();
+var finalCameraPosition = 20; 
+
+
 renderer.setSize(window.innerWidth, window.innerHeight);
-// document.body.appendChild(renderer.domElement);
+renderer.domElement.id = "3d-dom";
+renderer.domElement.classList.add("off")
+
 document.getElementById("shoe-div").appendChild(renderer.domElement);
+
 
 window.addEventListener("resize", function () {
   var width = window.innerWidth;
@@ -35,7 +41,7 @@ controls = new THREE.OrbitControls(camera, renderer.domElement);
 
 var loader = new THREE.GLTFLoader();
 
-loader.load("../htdocs/model/ascis-nimbus-20/scene.gltf", function (gltf) {
+loader.load("model/ascis-nimbus-20/scene.gltf", function (gltf) {
   gltf.scene.position.set(5, -15, 7);
 
   scene.add(gltf.scene);
@@ -47,7 +53,7 @@ loader.load("../htdocs/model/ascis-nimbus-20/scene.gltf", function (gltf) {
 
 //called once at the beginning of the game
 var Start = function () {
-  camera.position.set(0, 0, 20);
+  camera.position.set(0, 0, 30);
 };
 
 let frame = 0;
@@ -56,6 +62,7 @@ var Update = function () {
     Start();
     frame += 1;
   }
+  
 };
 
 var Render = function () {

@@ -9,10 +9,10 @@
 
     <link rel="stylesheet" href="./assests/Fonts/Myraid-pro/style.css" />
     <title>Nike Slider</title>
-    <script src = "../htdocs/javascript/three.js"></script>
-    <script src = "../htdocs/javascript/OrbitControls.js"></script>
-    <script src = "../htdocs/javascript/OBJLoader.js"></script>
-    <script src="../htdocs/javascript/GLTFLoader.js"></script>
+    <script src = "javascript/three.js"></script>
+    <script src = "javascript/OrbitControls.js"></script>
+    <script src = "javascript/OBJLoader.js"></script>
+    <script src="javascript/GLTFLoader.js"></script>
 
 
   </head>
@@ -64,16 +64,17 @@
     <main class="main container">
       <div class="row">
         <!-- NIKE SHOE -->
-        <div id = "shoe-div" class="shoe" style="background-color: black !important;" >
-          <!-- <div class="shoe-figure"></div> -->
+        <div id = "shoe-div" class="shoe"  >
+          <div id ="show-figure"  class="shoe-figure"></div>
 
-          <!-- <img  class="shoe-img" src="./assests/images/pic1.png" alt=""  />  -->
+         <img id = "shoe-img"  class="shoe-img" src="./assests/images/pic1.png" alt=""  /> 
           <!-- <img class="shoe-img" src="./images/pic2.png" alt="" /> -->
 
 
           <div class="dots">
-            <span class="dot dot-color-1 active"></span>
-            <span class="dot dot-color-2"></span>
+            <span id = "dot-2" onclick="ClickedDot(2)" class="dot dot-color-2"></span>
+            <span id = "dot-1" onclick="ClickedDot(1)" class="dot dot-color-1 active"></span>
+
           </div>
         </div>
 
