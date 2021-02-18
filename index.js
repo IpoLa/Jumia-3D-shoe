@@ -51,14 +51,14 @@ SwitchActiveDot = (count) => {
     document.getElementById("dot-2").classList.add("active");
     document.getElementById("threedicon").classList.remove("not-active");
     document.getElementById("crossicon").classList.remove("not-active");
-    document.getElementById("header").style.visibility = "hidden";
+    // document.getElementById("header").style.visibility = "hidden";
 
 } else {
   document.getElementById("header").style.visibility = "visible";
     document.getElementById("dot-1").classList.add("active");
     document.getElementById("dot-2").classList.remove("active");
     document.getElementById("crossicon").classList.add("not-active");
-    document.getElementById("threedicon").classList.add("not-active");
+     document.getElementById("threedicon").classList.add("not-active");
 
   }
 };
