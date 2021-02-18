@@ -8,17 +8,16 @@
     <link rel="stylesheet" href="3d-styles.css" />
 
     <link rel="stylesheet" href="./assests/Fonts/Myraid-pro/style.css" />
-    <title>Nike Slider</title>
-    <script src = "javascript/three.js"></script>
-    <script src = "javascript/OrbitControls.js"></script>
-    <script src = "javascript/OBJLoader.js"></script>
+    <title>Ascis</title>
+    <script src="javascript/three.js"></script>
+    <script src="javascript/OrbitControls.js"></script>
+    <script src="javascript/OBJLoader.js"></script>
     <script src="javascript/GLTFLoader.js"></script>
-
-
+    <script  src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header">
+    <header id="header" class="header">
       <!-- NAV -->
       <nav class="nav container">
         <div class="logo">
@@ -47,44 +46,78 @@
               <a href="" class="nav-link">CONTACT</a>
             </li>
           </ul>
+         
         </div>
 
-        <a href="" class="cart">
-          <img class="shopping-cart" src="./assests/images/icons/shopping cart.png" alt="" />
+        <a href="" class="cart"> 
+          <img
+            class="shopping-cart"
+            src="./assests/images/icons/shopping cart.png"
+            alt=""
+          />
           <!-- <span>Cart</span> -->
         </a>
 
         <div class="hamburger">
           <img src="./assests/images/icons/menu.svg" alt="" />
+
         </div>
       </nav>
       <!-- END OF NAV -->
     </header>
     <!-- MAIN -->
+
     <main class="main container">
       <div class="row">
         <!-- NIKE SHOE -->
-        <div id = "shoe-div" class="shoe"  >
-          <div id ="show-figure"  class="shoe-figure"></div>
+        <div id="shoe-div" class="shoe">
+          <div id="show-figure" class="shoe-figure"></div>
 
-         <img id = "shoe-img"  class="shoe-img" src="./assests/images/pic1.png" alt=""  /> 
+          <img
+            id="shoe-img"
+            class="shoe-img"
+            src="./assests/images/pic1.png"
+            alt=""
+          />
           <!-- <img class="shoe-img" src="./images/pic2.png" alt="" /> -->
 
 
           <div class="dots">
-            <span id = "dot-2" onclick="ClickedDot(2)" class="dot dot-color-2"></span>
-            <span id = "dot-1" onclick="ClickedDot(1)" class="dot dot-color-1 active"></span>
-
+            
+            <span
+            id="dot-2"
+            onclick="ClickedDot(2)"
+            class="dot dot-color-2"
+            ></span>
+            <span
+            id="dot-1"
+            onclick="ClickedDot(1)"
+            class="dot dot-color-1 active"
+            ></span>
           </div>
+       
         </div>
-
-        <div class="info">
+          
+          <div class="info">
+            <div class="threeicon"> 
+              <img
+                id="threedicon"
+                class="threedicon not-active"
+                src="./assests/images/icon-3d.png"
+              />
+          
+           <!-- <button  >  -->
+          
+            <img onclick="ClickedDot(2)"  id="crossicon" class="crossicon not-active"  src="./assests/images/show-cross.png"/> 
+          <!-- </button>  -->
+               </div> 
           <!-- INFORMATION -->
           <div class="shoe-info">
-            <span class="info-subtitle">Nike</span>
-            <h1 class="info-title">Air Max Motion 270</h1>
+            <span class="info-subtitle">Ascis</span>
+            <h1 class="info-title">Ascis Nimbus 20</h1>
             <p class="info-description">
-              A pair of high-quality sneakers
+              A pair of high-quality sneakers Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Amet, laudantium nostrum ex rerum.
             </p>
           </div>
 
@@ -113,7 +146,8 @@
           <!-- PRICE -->
           <div class="price">
             <span class="price-title">UGX 85,000</span>
-            <a href="" class="price-button">ADD TO CART</a>
+            <a   class="price-button">ADD TO CART</a> 
+       
           </div>
         </div>
       </div>
@@ -124,5 +158,6 @@
     <!-- Custom Script -->
     <script src="index.js"></script>
     <script src="game-code.js"></script>
+
   </body>
 </html>

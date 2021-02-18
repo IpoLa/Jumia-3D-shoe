@@ -35,6 +35,7 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 img {
@@ -68,8 +69,10 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--white);
-  z-index: 100;
+   background-color: var(--white);
+  /* background-color: transparent; */
+   z-index: 100;
+  transition: all 0.8s ease-in-out;
 }
 
 .hamburger {
@@ -96,23 +99,43 @@ img {
 }
 
 .nav-item:not(:last-child) {
-  margin-right: 0.5rem;
+  /* margin-right: 0.5rem; */
 }
 
 .nav-link {
   padding: 1rem;
 }
 
+
+
+
 @media only screen and (max-width: 768px) {
+  
+
+   .threeicon { 
+     /* margin-left: 50px; */
+      left: 30% !important; 
+     top: 6% !important;
+    /* transform: translate(100px, -800px) !important; */
+    transition: all 0.5s ease-in-out;
+  } 
+
+  .dot {
+    width: 1.8rem !important ;
+    height: 1.8rem !important;
+    margin-left: 2rem;
+    /* background-color: red !important; */
+  }
+
   .menu {
     position: fixed;
     top: 0;
     left: -100%;
     height: 100%;
     width: 80%;
-    background-color: var(--white);
-    z-index: 1000;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    z-index: 1000; 
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     transition: 500ms ease-in-out;
   }
 
@@ -131,9 +154,10 @@ img {
   }
 
   .nav-list {
-    padding: 3rem 0;
+    padding: 10rem 0;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    /* background-color: red; */
   }
 
   .nav-item:not(:last-child) {
@@ -143,6 +167,12 @@ img {
 
   .nav-link {
     font-weight: 500;
+  }
+
+  .nav-item {
+    margin-right: 0;
+    margin-bottom: 7rem !important;
+    font-size: 1.7rem;
   }
 }
 
@@ -157,6 +187,7 @@ img {
 }
 
 /* Nike Shoe */
+
 .shoe {
   display: flex;
   justify-content: center;
@@ -198,7 +229,6 @@ img {
   margin-right: auto;
   transform: rotate(30deg);
   transition: opacity 1s ease-in-out !important;
-
 }
 
 .dots {
@@ -211,30 +241,56 @@ img {
 
 .dot {
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: 1.1rem;
+  height: 1.1rem;
   border-radius: 50%;
   margin-bottom: 0.5rem;
   cursor: pointer;
   background-color: var(--black);
-  transition: all .5s ease-in-out;
-
+  transition: all 0.5s ease-in-out;
 }
 
 .dot:not(:last-child) {
   margin-right: 0.7rem;
 }
 
-
-
 .dot.active {
-  border: 1px solid var(--white);
+  /* border: 1px solid var(--white); */
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   background-color: var(--primary);
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.threeicon {
+  left: 25%; 
+  top: 12%;
+  position: absolute !important;
+  display: flex;
+  flex-direction: row;
+  /* top: 70px;
+  left: 400px; */
+  transition: all 0.5s ease-in-out;
 }
 
 
+.threedicon {
+  width: 7rem;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.crossicon {
+  width: 7rem;
+  height: auto;
+  cursor: pointer !important; 
+  z-index: 9999 !important;
+}
+
+.not-active {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transition: all 0.5s ease-in-out;
+}
 
 .info-subtitle {
   /* font-weight: 500; */

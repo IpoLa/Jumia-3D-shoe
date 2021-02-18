@@ -1,4 +1,5 @@
-var val = 1000;
+
+
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(
   75,
@@ -8,15 +9,13 @@ var camera = new THREE.PerspectiveCamera(
 );
 
 var renderer = new THREE.WebGLRenderer();
-var finalCameraPosition = 20; 
-
+var finalCameraPosition = 10;
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.domElement.id = "3d-dom";
-renderer.domElement.classList.add("off")
+renderer.domElement.classList.add("off");
 
 document.getElementById("shoe-div").appendChild(renderer.domElement);
-
 
 window.addEventListener("resize", function () {
   var width = window.innerWidth;
@@ -25,6 +24,26 @@ window.addEventListener("resize", function () {
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
 });
+
+
+
+
+//adjust camera-zoom
+if (window.innerWidth <= 767) {
+  var Start = function () {
+    camera.position.set(0, 0, 30);
+
+    //  scene.background = new THREE.Color(0x88888);
+  };
+
+  // alert("This is a mobile device.");
+} else {
+  var Start = function () {
+    camera.position.set(0, 0, 15);
+  };
+
+  // alert("This is a tablet or desktop.");
+}
 
 // const cubeGeometry = new THREE.BoxGeometry( 1, 1, 1 );
 // const cubeMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
@@ -43,6 +62,7 @@ var loader = new THREE.GLTFLoader();
 
 loader.load("model/ascis-nimbus-20/scene.gltf", function (gltf) {
   gltf.scene.position.set(5, -15, 7);
+  //gltf.scene.position.set(0, 0, 7);
 
   scene.add(gltf.scene);
 });
@@ -52,9 +72,6 @@ loader.load("model/ascis-nimbus-20/scene.gltf", function (gltf) {
 //  var cube = new THREE.Mesh(geometry, material);
 
 //called once at the beginning of the game
-var Start = function () {
-  camera.position.set(0, 0, 30);
-};
 
 let frame = 0;
 var Update = function () {
@@ -62,7 +79,6 @@ var Update = function () {
     Start();
     frame += 1;
   }
-  
 };
 
 var Render = function () {
