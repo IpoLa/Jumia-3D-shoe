@@ -550,6 +550,7 @@ margin-bottom: 5px !important;
  background-color: white;
  /* padding: 0.2rem 0.2rem; */
  width: 150px;
+ cursor: pointer;
  border-radius: 15px;
  height:40px;
 }
